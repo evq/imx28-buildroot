@@ -2,6 +2,8 @@
 # Instructions here https://community.freescale.com/docs/DOC-98910
 FROM ubuntu:13.10
 
+RUN sed -i 's$archive.ubuntu.com/ubuntu$mirrors.digitalocean.com/ubuntu-old$' /etc/apt/sources.list
+
 RUN apt-get update
 
 RUN apt-get install -y gettext libgtk2.0-dev rpm bison m4 libfreetype6-dev \
