@@ -10,7 +10,7 @@ ccache ncurses-dev zlib1g zlib1g-dev gcc g++ libtool \
 uuid-dev liblzo2-dev tcl dpkg asciidoc texlive-latex-base dblatex xutils-dev \
 texlive texinfo lib32z1 lib32ncurses5 lib32bz2-1.0 \
 libc6-dev-i386 u-boot-tools scrollkeeper gparted nfs-common nfs-kernel-server \
-git-core git-doc git-email git-gui gitk meld atftpd vim sudo wget
+git-core git-doc git-email git-gui gitk meld atftpd vim sudo wget cmake
 
 RUN ln -s /usr/lib/x86_64-linux-gnu/librt.so   /usr/lib/librt.so
 
