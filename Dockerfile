@@ -2,6 +2,9 @@
 # Instructions here https://community.freescale.com/docs/DOC-98910
 FROM ubuntu:13.10
 
+#Required due to Ubuntu moving 13.10 to old-releases
+RUN sed -i -e 's/archive.ubuntu.com\|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
+
 RUN apt-get update
 
 RUN apt-get install -y gettext libgtk2.0-dev rpm bison m4 libfreetype6-dev
@@ -24,9 +27,9 @@ RUN ln -s /usr/lib/x86_64-linux-gnu/librt.so   /usr/lib/librt.so
 
 ADD L2.6.35_1.1.0_130130_source.tar.gz /build/
 
-WORKDIR /build/ 
+WORKDIR /build/
 
-RUN useradd build 
+RUN useradd build
 RUN chown -R build /build
 USER build
 
